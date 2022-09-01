@@ -26,7 +26,7 @@
                     <table class="table table-bordered">
                         <tr>
                             <th>Name</th>
-                            <th>Category</th>
+                            <th>Creation date</th>
                         </tr>
                         @foreach($items as $item)
                             <tr>
