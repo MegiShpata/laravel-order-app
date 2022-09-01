@@ -18,7 +18,7 @@ class ItemController extends Controller
         //$posts = Post::all();
 
         $items = Item::where('user_id', Auth::user()->id)->orderBy('created_at','desc')->get();
-        return view('multiplecheckbox',compact('items'));
+        return view('multiplecheckboxfor',compact('items'));
     }
 
     public function create()
@@ -28,12 +28,19 @@ class ItemController extends Controller
 
     public function store(Request $request)
     {
+
         $input = $request->all();
         $input['user_id'] = Auth::user()->id;
         $input['name'] = $request->input('name');
 
         Item::create($input);
         return back()->with('success','Order created');
+    }
+
+    public function showData ()
+    {
+            $items = Item::all();
+            return view('show', compact('items'));
     }
 
 }

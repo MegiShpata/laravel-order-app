@@ -25,8 +25,4 @@ Route::resource('items', ItemController::class);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//Route::get('/orderlist', [App\Http\Controllers\ItemController::class, 'list'])->name('orderlist');
 
-//Route::view('/orderlist', 'Orderlist');
-
-//Route::resource('item', 'App\Http\Controllers\ItemController');
