@@ -25,18 +25,17 @@
                     </div>
                     <table class="table table-bordered">
                         <tr>
-                            <th>Name</th>
+                            <th>Items</th>
                             <th>Creation date</th>
                         </tr>
                         @foreach($items as $item)
                             <tr>
-                                <td>{{ $item->created_at }}</td>
-
                                 <td>
                                     @foreach($item->name as $value)
                                         {{$value}},
                                     @endforeach
                                 </td>
+                                <td>{{ $item->created_at }}</td>
                             </tr>
                         @endforeach
                     </table>
